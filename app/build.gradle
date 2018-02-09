@@ -28,29 +28,8 @@ android {
     sourceSets {
         main.java.srcDirs += 'build/generated/source/objectbox'
     }
-}
-
-
-
-
-android {
-    compileSdkVersion 26
-    defaultConfig {
-        applicationId "company.juancho.databaseproof"
-        minSdkVersion 15
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-    }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
-    sourceSets {
-        main.java.srcDirs += 'build/generated/source/objectbox'
+    kapt {
+        generateStubs = true
     }
 }
 
@@ -69,6 +48,6 @@ dependencies {
     kapt "io.objectbox:objectbox-processor:$objectboxVersion"
     implementation 'com.android.support:design:26.1.0'
 
-    compile 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.google.code.gson:gson:2.8.2'
 
 }

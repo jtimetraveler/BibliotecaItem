@@ -4,6 +4,7 @@ import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import company.bosqueoeste.bibliotecadeitemdd.view.activity.EditThingActivity
 import company.bosqueoeste.bibliotecadeitemdd.view.activity.MainActivity
 
 /**
@@ -15,13 +16,19 @@ object NavigationUtils {
 
 
 
-    fun NavigateToMainList(context: Context) {
+    fun navigateToMainActivity(context: Context) {
         openIntent(context, MainActivity.newInstance(context))
     }
 
-    fun NavigateToMainListWithClearTop(context: Context) {
+    fun navigateToMainActivityWithClearTop(context: Context) {
         openIntent(context, MainActivity.newInstance(context).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
     }
+
+
+    fun navigateToDetailsActivity(context: Context) {
+        openIntent(context, EditThingActivity.newInstance(context))
+    }
+
 
 
 

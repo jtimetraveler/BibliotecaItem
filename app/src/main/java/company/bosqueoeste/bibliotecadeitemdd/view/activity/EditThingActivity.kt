@@ -3,16 +3,17 @@ package company.bosqueoeste.bibliotecadeitemdd.view.activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import company.bosqueoeste.bibliotecadeitemdd.utils.NavigationUtils
+import company.bosqueoeste.bibliotecadeitemdd.R
+import company.bosqueoeste.bibliotecadeitemdd.view.fragment.EditObjectFragment
 
-open class MainActivity : BaseActivity() {
-
-
-
+/**
+ * Created by user on 09/02/2018.
+ */
+class EditThingActivity : BaseActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_main)
-        NavigationUtils.navigateToDetailsActivity(this)
+        super.replaceFragmentInBaseActivity(EditObjectFragment())
+
 
     }
 
@@ -22,4 +23,5 @@ open class MainActivity : BaseActivity() {
             return Intent(context, MainActivity::class.java)
         }
     }
+
 }

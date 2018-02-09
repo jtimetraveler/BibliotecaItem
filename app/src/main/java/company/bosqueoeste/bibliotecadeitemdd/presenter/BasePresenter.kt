@@ -23,9 +23,7 @@ import android.content.Context
  */
 
 
-internal abstract class BasePresenter<T : BasePresenter.View> {
-
-
+abstract class BasePresenter<T : BasePresenter.View> {
 
 
     lateinit var view: T
