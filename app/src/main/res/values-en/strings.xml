@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Items Library</string>
+    <string name="description_til" >Description</string>
+    <string name="name_til" >Name</string>
+    <string name="rareness" >Rareness: </string>
+
+</resources>
